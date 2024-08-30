@@ -6,7 +6,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/SpyrosMoux/passwdgen/generators"
+	"github.com/SpyrosMoux/passwdgen"
 )
 
 func init() {
@@ -24,16 +24,16 @@ func main() {
 	case true:
 		switch *numbersPtr {
 		case true:
-			fmt.Println(generators.RandomStringNumbersSymbols(*lengthPtr))
+			fmt.Println(passwdgen.RandomString(*lengthPtr))
 		case false:
-			fmt.Println(generators.RandomStringSymbols(*lengthPtr))
+			fmt.Println(passwdgen.RandomStringSymbols(*lengthPtr))
 		}
 	case false:
 		switch *numbersPtr {
 		case true:
-			fmt.Println(generators.RandomStringNumbers(*lengthPtr))
+			fmt.Println(passwdgen.RandomStringNumbers(*lengthPtr))
 		case false:
-			fmt.Println(generators.RandomString(*lengthPtr))
+			fmt.Println(passwdgen.RandomString(*lengthPtr))
 		}
 	}
 }
