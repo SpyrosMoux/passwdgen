@@ -2,7 +2,8 @@ package utils
 
 import (
 	"math/rand"
-	"github.com/spyrosmoux/passwdgen/constants"
+
+	"github.com/SpyrosMoux/passwdgen/constants"
 )
 
 func RandomStringSymbols(n int) string {
