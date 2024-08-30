@@ -24,7 +24,7 @@ func main() {
 	case true:
 		switch *numbersPtr {
 		case true:
-			fmt.Println(passwdgen.RandomString(*lengthPtr))
+			fmt.Println(passwdgen.RandomStringNumbersSymbols(*lengthPtr))
 		case false:
 			fmt.Println(passwdgen.RandomStringSymbols(*lengthPtr))
 		}
