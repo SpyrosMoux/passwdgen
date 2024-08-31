@@ -22,7 +22,7 @@ func NewRandomStringOptions() RandomStringOptions {
 }
 
 // RandomString returns a randomized string.
-// (n) defaults to 16.
+// Length defaults to 16.
 func RandomString(options *RandomStringOptions) string {
 	b := make([]byte, options.Length)
 	for i := range b {
@@ -31,8 +31,8 @@ func RandomString(options *RandomStringOptions) string {
 	return string(b)
 }
 
-// RandomStringNumbersSymbols returns a randomized string containing numbers.
-// (n) defaults to 16.
+// RandomStringNumbers returns a randomized string containing numbers.
+// Length defaults to 16.
 func RandomStringNumbers(options *RandomStringOptions) string {
 	b := make([]byte, options.Length)
 	lettersNumbers := Letters + Numbers
@@ -42,8 +42,8 @@ func RandomStringNumbers(options *RandomStringOptions) string {
 	return string(b)
 }
 
-// RandomStringNumbersSymbols returns a randomized string containing symbols.
-// (n) defaults to 16.
+// RandomStringSymbols returns a randomized string containing symbols.
+// Length defaults to 16.
 func RandomStringSymbols(options *RandomStringOptions) string {
 	b := make([]byte, options.Length)
 	lettersSymbols := Letters + Symbols
@@ -54,7 +54,7 @@ func RandomStringSymbols(options *RandomStringOptions) string {
 }
 
 // RandomStringNumbersSymbols returns a randomized string containing numbers and symbols.
-// (n) defaults to 16.
+// Length defaults to 16.
 func RandomStringNumbersSymbols(options *RandomStringOptions) string {
 	b := make([]byte, options.Length)
 	lettersNumbersSymbols := Letters + Numbers + Symbols
