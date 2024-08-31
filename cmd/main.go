@@ -20,20 +20,23 @@ func main() {
 
 	flag.Parse()
 
+	options := passwdgen.NewRandomStringOptions()
+	options.Length = *lengthPtr
+
 	switch *symbolsPtr {
 	case true:
 		switch *numbersPtr {
 		case true:
-			fmt.Println(passwdgen.RandomStringNumbersSymbols(*lengthPtr))
+			fmt.Println(passwdgen.RandomStringNumbersSymbols(&options))
 		case false:
-			fmt.Println(passwdgen.RandomStringSymbols(*lengthPtr))
+			fmt.Println(passwdgen.RandomStringSymbols(&options))
 		}
 	case false:
 		switch *numbersPtr {
 		case true:
-			fmt.Println(passwdgen.RandomStringNumbers(*lengthPtr))
+			fmt.Println(passwdgen.RandomStringNumbers(&options))
 		case false:
-			fmt.Println(passwdgen.RandomString(*lengthPtr))
+			fmt.Println(passwdgen.RandomString(&options))
 		}
 	}
 }
